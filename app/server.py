@@ -94,8 +94,8 @@ async def analyze(request):
             2: '雨傘節',
             3: '眼鏡蛇',
             4: '百步蛇'}
-    return JSONResponse({'result': name[prediction])
-
+    return JSONResponse({'result': str(prediction)})
+    print(name[prediction])
 
 if __name__ == '__main__':
     if 'serve' in sys.argv:
